@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery</title>
+    <!--linking to the jquery library-->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+</head>
+<!--script tag because its java scipt language inside your html-->
+<script>
+    //$=jquery document=html element .ready=when it loads to this.... Function
+    $(document).ready(function() {
+        //append=adds what you define to the end of the element which in this case is the html element
+        $("html").append(
+            //the \ at the end means to continue on the next line below
+            "<body>\
+               <div id='container'>\
+                <div id='inner'>\
+                    <h1>basic jQuery</h1>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3</p>\
+                </div>\
+               </div>\
+            </body>"
+        );
+        //this is how to modify the html with css using jquery the #=id
+        $("#2").css({
+            "color": "red"
+        });
+        //this function hides the h1 element when clicking on paragraph 3
+        $("#3").click(function() {
+            $('h1').hide();
+        });
+    });
+</script>
+
+
+
+
+
+</html>
